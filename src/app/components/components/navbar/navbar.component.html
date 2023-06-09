@@ -1,0 +1,25 @@
+<mat-toolbar>
+  <div class="logo">
+    <a routerLink="/">
+      <img src="../../../../assets/JulianRojas_white.svg" alt="logo" loading="lazy">
+    </a>
+  </div>
+  <div class="center">
+    <a mat-tab routerLink="/home">Inicio</a>
+    <a mat-tab routerLink="/aboutme">Acerca de mi</a>
+    <a mat-tab routerLink="/projects">Proyectos</a>
+  </div>
+
+  <div class="right">
+    <div ngClass="language-icon-container">
+      <a ngClass="language-icon" routerLink="/shoppingcart">
+        <mat-icon>language</mat-icon>
+      </a>
+    </div>
+    <div ngClass="language">
+      <span>EN</span>
+      <span>|</span>
+      <span>ESP</span>
+    </div>
+  </div>
+</mat-toolbar>
