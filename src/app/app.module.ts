@@ -15,6 +15,7 @@ import { ProjectListComponent } from './components/components/project-list/proje
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { ProjectsComponent } from './components/pages/projects/projects.component';
 import { AboutMeComponent } from './components/pages/about-me/about-me.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AboutMeComponent } from './components/pages/about-me/about-me.component
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

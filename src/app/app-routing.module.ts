@@ -4,6 +4,7 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { AboutMeComponent } from './components/pages/about-me/about-me.component';
 import { ProjectsComponent } from './components/pages/projects/projects.component';
+import { ProjectListComponent } from './components/components/project-list/project-list.component';
 
 const routes: Routes = [
 
@@ -23,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'projects',
-    component: ProjectsComponent
+    component: ProjectListComponent
   },
   {
     path: '**',

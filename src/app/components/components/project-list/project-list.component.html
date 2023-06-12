@@ -1,1 +1,3 @@
-<p>project-list works!</p>
+<div ngClass="project-list-container">
+  <app-project  *ngFor="let i_project of l_projects" [project]="i_project"></app-project>
+</div>
