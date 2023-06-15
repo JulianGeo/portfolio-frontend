@@ -1,9 +1,26 @@
-.home-background {
-  background-image: url("../../../../assets/HomeBackgroundsvg.svg");
-  background-size: cover;
-  background-position: center;
-  height: 55vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h5 {
+  font-size: 25px;
 }
+
+.dark-h5 {
+  color: #262626;
+}
+
+p {
+  font-size: 21px;
+}
+
+.dark-p {
+  color: #262626;
+}
+
+[class~="carousel-caption"][class~="d-none"][class~="d-md-block"]{
+  background-color: rgb(175, 211, 226, 0.3);
+  border-radius: 10px;
+}
+
+[class~="carousel-caption"][class~="d-none"][class~="d-md-block"][class~="dark"]{
+  background-color: rgba(20, 108, 148, 0.3);
+  border-radius: 10px;
+}
+
