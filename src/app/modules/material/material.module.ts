@@ -12,7 +12,7 @@ import { MatSelectModule} from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [],
@@ -31,6 +31,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatTabsModule,
     MatSlideToggleModule,
     MatPaginatorModule
-  ]}
+  ],
+  providers: [MatPaginatorIntl ],
+}
 )
 export class MaterialModule { }

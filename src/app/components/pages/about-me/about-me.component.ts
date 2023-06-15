@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
 
+  onSlideChange(): void {
+    console.log('slide change');
+  }
 }
