@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -7,7 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
 
-  onSlideChange(): void {
-    console.log('slide change');
-  }
+
 }

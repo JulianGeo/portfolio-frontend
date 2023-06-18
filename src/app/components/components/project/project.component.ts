@@ -11,7 +11,9 @@ import { DataService } from 'src/app/services/data.service';
 export class ProjectComponent {
 
   private technology: Technology = {
-    technology_name: 's',
+    technology_name: '',
+    expertise: 0,
+    main_skill: false,
   };
 
   constructor(

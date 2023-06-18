@@ -31,6 +31,8 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { TechnologiesChartComponent } from './components/components/technologies-chart/technologies-chart.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     HomePageComponent,
     ProjectsComponent,
     AboutMeComponent,
+    TechnologiesChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,8 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     MdbScrollspyModule,
     MdbTabsModule,
     MdbTooltipModule,
-    MdbValidationModule
+    MdbValidationModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

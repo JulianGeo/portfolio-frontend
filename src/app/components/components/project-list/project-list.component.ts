@@ -45,7 +45,6 @@ export class ProjectListComponent {
     const endIndex = startIndex + pageSize;
 
     this.pageSlice = this.l_projects.slice(startIndex, endIndex);
-
   }
 
 }
