@@ -33,6 +33,7 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { TechnologiesChartComponent } from './components/components/technologies-chart/technologies-chart.component';
+import { SkillsContainerComponent } from './components/components/skills-container/skills-container.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { TechnologiesChartComponent } from './components/components/technologies
     ProjectsComponent,
     AboutMeComponent,
     TechnologiesChartComponent,
+    SkillsContainerComponent,
   ],
   imports: [
     BrowserModule,

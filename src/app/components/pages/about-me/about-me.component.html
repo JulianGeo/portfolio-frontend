@@ -1,54 +1,37 @@
 <section ngClass="about-section">
-  <div ngClass="about-section-header">
+
+  <div ngClass="sub-section-header">
     <h2>Perfil</h2>
     <div ngClass="separator"></div>
   </div>
+
   <div ngClass="container">
 
-    <div ngClass="main-skills-container">
-      <div ngClass="main-skill-container" id="main-skill-container-1">
-        <div ngClass="main-skill">
-          <i class="fas fa-database"></i>
-        </div>
-        <div ngClass="skill-description">
-          <h3>Backend</h3>
-          <p>Java & Spring APIs</p>
-        </div>
+    <app-skills-container></app-skills-container>
+
+    <div ngClass="sub-section-header">
+      <h2>Perfíl profesional</h2>
+      <div ngClass="separator"></div>
+    </div>
+
+    <div ngClass="profile-resume-container">
+      <div ngClass="profile-resume">
+        <img src="../../../../assets/Avatar.png" alt="">
+        <p>Desarrollador Junior de Java-Springboot y Angular, altamente motivado y dedicado,
+          con dominio de inglés conversacional, en busca de un puesto desafiante para
+          aprovechar mis habilidades y conocimientos en desarrollo de software. Con una sólida
+          formación en geología y experiencia en el uso de software GIS y Python para ciencia de
+          datos, con mucha motivación por hacer la transición de mi carrera al apasionante
+          mundo del desarrollo de software</p>
       </div>
-      <div ngClass="main-skill-container" id="main-skill-container-2">
-        <div ngClass="main-skill">
-          <i class="fab fa-angular"></i>
-        </div>
-        <div ngClass="skill-description">
-          <h3>Frontend</h3>
-          <p>Angular SPA</p>
-        </div>
-      </div>
-      <div ngClass="main-skill-container" id="main-skill-container-3">
-        <div ngClass="main-skill">
-          <i class="far fa-map"></i>
-        </div>
-        <div ngClass="skill-description">
-          <h3>GIS</h3>
-          <p>Arcgis & Qgis maps</p>
-        </div>
-      </div>
-      <div ngClass="main-skill-container" id="main-skill-container-4">
-        <div ngClass="main-skill">
-          <i class="fab fa-python"></i>
-        </div>
-        <div ngClass="skill-description">
-          <h3>Data science</h3>
-          <p>Python scripting for data science</p>
-        </div>
+      <div ngClass="app-technologies-chart-container">
+        <app-technologies-chart></app-technologies-chart>
       </div>
     </div>
 
-
-
-    <div ngClass="profile-resume">
-      <h2>Profile Resume</h2>
-      <!-- Your profile resume content goes here -->
+    <div ngClass="sub-section-header">
+      <h2>Experiencia laboral</h2>
+      <div ngClass="separator"></div>
     </div>
 
     <div ngClass="working-experience">
@@ -58,60 +41,16 @@
       possimus minima.
     </div>
 
+    <div ngClass="sub-section-header">
+      <h2>Educación</h2>
+      <div ngClass="separator"></div>
+    </div>
+
     <div ngClass="education">
       <h2>Education</h2>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repellendus officiis iste repellat nam dolorem
       veniam nesciunt optio nobis facere ipsam alias soluta quasi dolorum, eligendi accusantium! Voluptate, ducimus qui.
     </div>
-
-    <div ngClass="skills">
-      <h2>Skills</h2>
-      <!-- Your skills content goes here -->
-    </div>
-
-
-
-    <div ngClass="progress">
-      <div ngClass="progress-bar-container">
-        <div ngClass="skill-tag">
-          <p>Angular</p>
-        </div>
-        <div ngClass="skill-progress">
-          <p>progress</p>
-        </div>
-        <div ngClass="skill-progress-number">
-          <p>70%</p>
-        </div>
-      </div>
-
-      <div ngClass="progress-bar-container">
-        <div ngClass="skill-tag">
-          <p>Typescript</p>
-        </div>
-        <div ngClass="skill-progress">
-          <p>progress</p>
-        </div>
-        <div ngClass="skill-progress-number">
-          <p>80%</p>
-        </div>
-      </div>
-
-      <div ngClass="progress-bar-container">
-        <div ngClass="skill-tag">
-          <p>Typescript</p>
-        </div>
-        <div ngClass="skill-progress">
-          <div ngClass="progress-bar">
-            <div ngClass="progress-bar angular"></div>
-          </div>
-        </div>
-        <div ngClass="skill-progress-number">
-          <p>80%</p>
-        </div>
-      </div>
-    </div>
-
-<app-technologies-chart></app-technologies-chart>
 
   </div>
 </section>
