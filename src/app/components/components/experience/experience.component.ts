@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Experience } from 'src/app/models/experience.model';
 
 @Component({
   selector: 'app-experience',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class ExperienceComponent {
 
+  @Input() experience: Experience|undefined = {
+    company: '',
+    description: '',
+    position: '',
+    image_url: '',
+    start_date: new Date(),
+    end_date: new Date(),
+  }
+
 }
+
+
