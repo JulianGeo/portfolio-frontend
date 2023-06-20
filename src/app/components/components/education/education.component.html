@@ -1,1 +1,17 @@
-<p>education works!</p>
+<div class="education-card">
+  <div class="education-image">
+    <img src="../../../../assets/springboot.png" alt="Education Image">
+  </div>
+  <div class="education-details">
+    <h2 class="education-name">{{ education?.institution }}</h2>
+    <p class="education-description">{{ education?.degree }}</p>
+    <div class="education-technologies">
+      <p *ngFor="let technology of education?.education_tech" class="technology">{{ technology.technology.technology_name
+        }}</p>
+    </div>
+    <div class="education-links">
+      <a href="https://github.com/JulianGeo" target="_blank">GitHub</a>
+      <a href="https://github.com/JulianGeo" target="_blank">Website</a>
+    </div>
+  </div>
+</div>

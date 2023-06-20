@@ -1,1 +1,17 @@
-<p>experience works!</p>
+<div class="experience-card">
+  <div class="experience-image">
+    <img src="../../../../assets/springboot.png" alt="Experience Image">
+  </div>
+  <div class="experience-details">
+    <h2 class="experience-name">{{ experience?.company}}</h2>
+    <p class="experience-description">{{ experience?.position }}</p>
+    <div class="experience-technologies">
+      <p *ngFor="let technology of experience?.experience_tech" class="technology">{{ technology.technology.technology_name
+        }}</p>
+    </div>
+    <div class="experience-links">
+      <a href="https://github.com/JulianGeo" target="_blank">GitHub</a>
+      <a href="https://github.com/JulianGeo" target="_blank">Website</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+.card-container{
+  justify-content: center;
+}
+
+.education-card {
+  margin: 15px auto;
+  width: 80%;
+  background-color: #AFD3E2;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  .education-image {
+    width: 120px;
+    height: 120px;
+    margin-right: 16px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  .education-details {
+
+
+    .education-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .education-description {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .education-technologies {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+
+      .technology {
+        background-color: #146C94;
+        color: #fff;
+        font-size: 14px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        margin:5px;
+      }
+    }
+
+    .education-links {
+      a {
+        display: inline-block;
+        margin-right: 8px;
+        background-color: #F6F1F1;
+        color: #333;
+        text-decoration: none;
+        padding: 4px 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: #146C94;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+    .education-image {
+      display: none;
+    }
+  }
+
+
+}
