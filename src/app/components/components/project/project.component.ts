@@ -9,13 +9,6 @@ import { Technology } from 'src/app/models/technology.model';
 })
 export class ProjectComponent {
 
-  private technology: Technology = {
-    technology_name: '',
-    expertise: 0,
-    main_skill: false,
-  };
-
-
 
   @Input() project: Project|undefined = {
     id: '',
