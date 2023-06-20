@@ -34,6 +34,8 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { TechnologiesChartComponent } from './components/components/technologies-chart/technologies-chart.component';
 import { SkillsContainerComponent } from './components/components/skills-container/skills-container.component';
+import { EducationComponent } from './components/components/education/education.component';
+import { EducationListComponent } from './components/components/education-list/education-list.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { SkillsContainerComponent } from './components/components/skills-contain
     AboutMeComponent,
     TechnologiesChartComponent,
     SkillsContainerComponent,
+    EducationComponent,
+    EducationListComponent,
   ],
   imports: [
     BrowserModule,

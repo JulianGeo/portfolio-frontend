@@ -3,7 +3,7 @@ export interface Experience {
   company: string,
   description: string,
   position: string,
-  imageUrl?: string,
-  startYear: Date,
-  endYear?: Date|string,
+  image_url?: string,
+  start_date: Date,
+  end_date?: Date,
 }

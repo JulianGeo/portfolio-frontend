@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { Project } from 'src/app/models/project.model';
-import { DataService } from 'src/app/services/data.service';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
   selector: 'app-project-list',
@@ -16,7 +16,7 @@ export class ProjectListComponent {
   pageSlice: Project[] = [];
 
   constructor(
-    private service: DataService,
+    private service: ProjectsService,
     public _MatPaginatorIntl: MatPaginatorIntl
   ) { }
 

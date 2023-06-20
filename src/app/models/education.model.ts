@@ -3,6 +3,6 @@ export interface Education {
   institution: string,
   degree: string,
   imageUrl?: string,
-  startYear: Date,
-  endYear?: Date|string,
+  start_date: Date,
+  end_date?: Date,
 }
