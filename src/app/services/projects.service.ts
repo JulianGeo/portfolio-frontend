@@ -22,7 +22,8 @@ export class ProjectsService {
   getAll(): Observable<any> {
     const headers = new HttpHeaders()
       .set('apikey', this.dbService.getConnection().apiKey)
-      .set('Authorization', this.dbService.getConnection().authorization);
+      .set('Authorization', this.dbService.getConnection().authorization)
+
 
     return this.http.get(this.apiUrl, { headers });
   }

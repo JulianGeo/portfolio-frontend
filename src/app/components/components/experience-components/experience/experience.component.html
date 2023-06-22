@@ -1,0 +1,16 @@
+<div class="experience-card">
+  <div ngClass="experience-header">
+    <h2 class="experience-name">{{ experience?.company}}</h2>
+    <p class="time-span">
+      {{ experience?.start_date | date:'MM/Y'}} -
+      {{experience?.end_date ? (experience?.end_date | date:'MM/Y') : "actualidad"}}
+    </p>
+  </div>
+  <div ngClass="experience-body">
+    <p class="experience-description">{{ experience?.position }}</p>
+    <div ngClass="more-information">
+      <mat-icon (click)="openDialog()">search</mat-icon>
+    </div>
+  </div>
+
+</div>

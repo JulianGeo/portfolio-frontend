@@ -1,0 +1,12 @@
+<div>
+  <div ngClass="experience-list-container">
+<!--     <div ngClass="experience-list-container-header">
+      <h2>Experiencia laboral</h2>
+      <div class="separator"></div>
+    </div> -->
+    <div infinite-scroll [infiniteScrollDistance]="distance" [infiniteScrollThrottle]="throttle"
+      (scrolled)="onScroll()">
+      <app-experience *ngFor="let i_experience of l_experience" [experience]="i_experience"></app-experience>
+    </div>
+  </div>
+</div>

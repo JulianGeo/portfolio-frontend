@@ -9,51 +9,17 @@
 
     <app-skills-container></app-skills-container>
 
+
     <div ngClass="sub-section-header">
       <h2>Perfíl profesional</h2>
       <div ngClass="separator"></div>
     </div>
 
-    <div ngClass="profile-resume-container">
-      <div ngClass="profile-resume">
-        <img src="../../../../assets/Avatar.png" alt="">
-        <p>Desarrollador Junior de Java-Springboot y Angular, altamente motivado y dedicado,
-          con dominio de inglés conversacional, en busca de un puesto desafiante para
-          aprovechar mis habilidades y conocimientos en desarrollo de software. Con una sólida
-          formación en geología y experiencia en el uso de software GIS y Python para ciencia de
-          datos, con mucha motivación por hacer la transición de mi carrera al apasionante
-          mundo del desarrollo de software</p>
-      </div>
-      <div ngClass="app-technologies-chart-container">
-        <app-technologies-chart></app-technologies-chart>
-      </div>
-    </div>
+    <app-professional-profile></app-professional-profile>
 
-    <div ngClass="sub-section-header">
-      <h2>Experiencia laboral</h2>
-      <div ngClass="separator"></div>
-    </div>
-
-    <div ngClass="working-experience">
-      <h2>Working Experience</h2>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat ad officiis necessitatibus natus
-      delectus, possimus minus atque magni! Ipsum ex quibusdam iste magnam exercitationem laboriosam reprehenderit atque
-      possimus minima.
-      <app-experience-list></app-experience-list>
-    </div>
-
-    <div ngClass="sub-section-header">
-      <h2>Educación</h2>
-      <div ngClass="separator"></div>
-    </div>
-
-    <div ngClass="education">
-      <h2>Education</h2>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repellendus officiis iste repellat nam dolorem
-      veniam nesciunt optio nobis facere ipsam alias soluta quasi dolorum, eligendi accusantium! Voluptate, ducimus qui.
-      <app-education-list
-      ></app-education-list>
-    </div>
-
+    <mat-tab-group>
+      <mat-tab label="Experiencia profesional"><app-experience-list></app-experience-list></mat-tab>
+      <mat-tab label="Educación"> <app-education-list></app-education-list></mat-tab>
+    </mat-tab-group>
   </div>
 </section>

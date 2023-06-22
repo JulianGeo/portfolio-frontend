@@ -4,7 +4,9 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { AboutMeComponent } from './components/pages/about-me/about-me.component';
 import { ProjectsComponent } from './components/pages/projects/projects.component';
-import { ProjectListComponent } from './components/components/project-list/project-list.component';
+import { ProjectListComponent } from './components/components/project-components/project-list/project-list.component';
+import { EducationListComponent } from './components/components/education-components/education-list/education-list.component';
+import { ExperienceListComponent } from './components/components/experience-components/experience-list/experience-list.component';
 
 const routes: Routes = [
 
@@ -12,6 +14,11 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     redirectTo: 'home'
+  },
+
+    {
+    path: 'test',
+    component: ExperienceListComponent
   },
 
   {

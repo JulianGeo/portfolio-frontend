@@ -1,0 +1,15 @@
+<div class="education-card">
+  <div class="education-header">
+    <h2 class="education-description">{{ education?.degree }}</h2>
+    <p class="time-span">
+      {{ education?.start_date | date:'MM/Y'}} -
+      {{education?.end_date ? (education?.end_date | date:'MM/Y') : "actualidad"}}
+    </p>
+  </div>
+  <div ngClass="education-body">
+    <p class="education-name">{{ education?.institution }}</p>
+    <div ngClass="more-information">
+      <mat-icon (click)="openDialog()">search</mat-icon>
+    </div>
+  </div>
+</div>

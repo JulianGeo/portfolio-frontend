@@ -18,11 +18,12 @@ export class ExperienceService {
   + 'experience?select=company,description,position,start_date,end_date,experience_tech(technology(technology_name))'
 
 
-  getAll(): Observable<any> {
+  getAll(from: number, to: number): Observable<any> {
     const headers = new HttpHeaders()
       .set('apikey', this.dbService.getConnection().apiKey)
-      .set('Authorization', this.dbService.getConnection().authorization);
+      .set('Authorization', this.dbService.getConnection().authorization)
+      .set('Range', from.toString().concat("-", to.toString()));
 
-    return this.http.get(this.apiUrl, { headers });
+      return this.http.get(this.apiUrl, { headers });
   }
 }

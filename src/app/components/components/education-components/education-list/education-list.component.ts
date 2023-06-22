@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginatorIntl, PageEvent } from '@angular/material/paginator';
 import { Education } from 'src/app/models/education.model';
 import { EducationService } from 'src/app/services/education.service';
+import { EducationPopupComponent } from '../education-popup/education-popup.component';
 
 @Component({
   selector: 'app-education-list',
@@ -16,7 +18,8 @@ export class EducationListComponent {
 
   constructor(
     private service: EducationService,
-    public _MatPaginatorIntl: MatPaginatorIntl
+    public _MatPaginatorIntl: MatPaginatorIntl,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -44,6 +47,14 @@ export class EducationListComponent {
     const endIndex = startIndex + pageSize;
 
     this.pageSlice = this.l_education.slice(startIndex, endIndex);
+  }
+
+  openDialog(education: Education) {
+    const dialogRef = this.dialog.open(EducationPopupComponent, { data: education });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

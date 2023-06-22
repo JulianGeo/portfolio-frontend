@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Experience } from 'src/app/models/experience.model';
+import { ExperiencePopupComponent } from '../experience-popup/experience-popup.component';
 
 @Component({
   selector: 'app-experience',
@@ -16,6 +18,20 @@ export class ExperienceComponent {
     start_date: new Date(),
     end_date: new Date(),
   }
+
+  constructor(
+    private dialog: MatDialog
+  ) { }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(ExperiencePopupComponent, { data: this.experience });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+
 
 }
 
