@@ -1,3 +1,20 @@
+mdb-carousel{
+
+  @media screen and (max-width: 750px) {
+    display: none;
+
+    .carousel-item {
+      display: none; // Hide the carousel items on small screens
+    }
+
+    .carousel-caption {
+      display: block; // Display a simplified caption or alternative content
+    }
+  }
+
+}
+
+
 h5 {
   font-size: 25px;
 }
@@ -8,19 +25,24 @@ h5 {
 
 p {
   font-size: 21px;
+
+  @media screen and (max-width: 930px) {
+    display: none;
+  }
+
+
 }
 
 .dark-p {
   color: #262626;
 }
 
-[class~="carousel-caption"][class~="d-none"][class~="d-md-block"]{
+[class~="carousel-caption"][class~="d-none"][class~="d-md-block"] {
   background-color: rgb(175, 211, 226, 0.3);
   border-radius: 10px;
 }
 
-[class~="carousel-caption"][class~="d-none"][class~="d-md-block"][class~="dark"]{
+[class~="carousel-caption"][class~="d-none"][class~="d-md-block"][class~="dark"] {
   background-color: rgba(20, 108, 148, 0.3);
   border-radius: 10px;
 }
-

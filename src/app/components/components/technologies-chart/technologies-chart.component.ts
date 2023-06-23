@@ -11,7 +11,7 @@ export class TechnologiesChartComponent {
 
   single: any = [];
   total: number = this.single.length;
-  view: [number, number] = [400, 400];
+  view: [number, number] = [300, 400];
 
 
   // Chart options
