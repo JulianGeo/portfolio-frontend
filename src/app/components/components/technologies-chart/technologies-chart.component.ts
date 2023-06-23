@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TechnologyService } from 'src/app/services/technology.service';
-import { Color, ScaleType } from '@swimlane/ngx-charts';
+import { Color, ScaleType  } from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'app-technologies-chart',
@@ -58,6 +58,11 @@ export class TechnologiesChartComponent {
 
   onDeactivate(data: any): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
+
+  formatDataLabel(value: any )
+  {
+    return value + '%';
   }
 
   onSlideChange(): void {
