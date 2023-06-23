@@ -11,6 +11,24 @@
   </div>
 
   <div class="right">
+    <div mdbDropdown class="dropdown dropstart">
+      <button
+        class="btn btn-secondary "
+        type="button"
+        id="dropdownMenuButton2"
+        mdbDropdownToggle
+        aria-expanded="false"
+      >
+      <i class="fas fa-bars"></i>
+      </button>
+      <ul mdbDropdownMenu class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+        <li><a class="dropdown-item" routerLink="/home">Inicio</a></li>
+        <li><a class="dropdown-item" routerLink="/aboutme">Acerca de mi</a></li>
+        <li><a class="dropdown-item" routerLink="/projects">Proyectos</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--   <div class="right">
     <div ngClass="language-icon-container">
       <a ngClass="language-icon" routerLink="/shoppingcart">
         <mat-icon>language</mat-icon>
@@ -21,5 +39,5 @@
       <span>|</span>
       <span>ESP</span>
     </div>
-  </div>
+  </div> -->
 </mat-toolbar>
