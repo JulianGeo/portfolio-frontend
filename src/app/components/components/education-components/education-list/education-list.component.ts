@@ -27,7 +27,11 @@ export class EducationListComponent {
 
     this.service.getAll().subscribe({
       next: (education) => {
-        this.l_education = education,
+        this.l_education = education.sort((a: { end_date: Date; }, b: { end_date: Date; }) => {
+          const dateA = a.end_date ? new Date(a.end_date).getTime() : 0;
+          const dateB = b.end_date ? new Date(b.end_date).getTime() : 0;
+          return dateB - dateA;
+        });
         this.total = this.l_education.length;
         this.updatePageSlice(0,3);
 

@@ -23,10 +23,14 @@ export class ExperienceListComponent {
 
 
   ngOnInit(): void {
-    this.service.getAll(this.page, this.distance-1).subscribe({
+    this.service.getAll(this.page, this.distance - 1).subscribe({
       next: (experience) => {
-        this.l_experience = experience,
-          this.total = this.l_experience.length;
+        this.l_experience = experience.sort((a: { end_date: Date; }, b: { end_date: Date; }) => {
+          const dateA = a.end_date ? new Date(a.end_date).getTime() : 0;
+          const dateB = b.end_date ? new Date(b.end_date).getTime() : 0;
+          return dateA - dateB;
+        });
+        this.total = this.l_experience.length;
       },
       error: (console.log),
       complete: (console.log)
@@ -35,14 +39,14 @@ export class ExperienceListComponent {
 
 
   onScroll(): void {
-    const from = 2+this.page*2;
-    const to = (2+this.page*2)+1;
+    const from = 2 + this.page * 2;
+    const to = (2 + this.page * 2) + 1;
 
     this.service.getAll(from, to)
-    .subscribe((experience: Experience[]) => {
-      this.l_experience.push(...experience);
-      ++this.page;
-    });
+      .subscribe((experience: Experience[]) => {
+        this.l_experience.push(...experience);
+        ++this.page;
+      });
   }
 
 
