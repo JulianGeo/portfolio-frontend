@@ -25,7 +25,11 @@ export class ProjectListComponent {
 
     this.service.getAll().subscribe({
       next: (projects) => {
-        this.l_projects = projects.reverse(),
+        this.l_projects = projects.sort((a: { updated_at: Date; }, b: { updated_at: Date; }) => {
+          const dateA = new Date(a.updated_at).getTime();
+          const dateB = new Date(b.updated_at).getTime();
+          return dateB - dateA;
+        });
         this.total = this.l_projects.length;
         this.updatePageSlice(0,3);
 

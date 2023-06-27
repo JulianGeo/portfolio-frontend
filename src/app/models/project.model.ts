@@ -8,4 +8,5 @@ export interface Project {
   project_tech?: ProjectTechnology[],
   githubUrl?: string,
   webUrl?: string
+  updated_at: Date,
 }

@@ -17,7 +17,8 @@ export class ProjectComponent {
     image_url: '',
     project_tech: [],
     githubUrl: '',
-    webUrl: ''
+    webUrl: '',
+    updated_at: new Date(),
   }
 
 }
