@@ -15,7 +15,7 @@ export class ProjectsService {
   ) { }
 
 
-  apiUrl: string = this.dbService.getConnection().apiUrl + 'project?select=name,description,githubUrl,webUrl,project_tech(technology(technology_name))'
+  apiUrl: string = this.dbService.getConnection().apiUrl + 'project?select=name,description,githubUrl,webUrl,image_url,project_tech(technology(technology_name))'
 
   //apiUrl: string = 'https://rlcfqljugzpltutjtmbk.supabase.co/rest/v1/project?select=name,description,project_tech(technology(technology_name))'
 

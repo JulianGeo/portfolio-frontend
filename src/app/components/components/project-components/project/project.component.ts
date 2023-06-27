@@ -14,7 +14,7 @@ export class ProjectComponent {
     id: '',
     name: '',
     description: '',
-    imageUrl: '',
+    image_url: '',
     project_tech: [],
     githubUrl: '',
     webUrl: ''

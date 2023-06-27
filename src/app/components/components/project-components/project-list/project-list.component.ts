@@ -24,8 +24,8 @@ export class ProjectListComponent {
     this._MatPaginatorIntl.itemsPerPageLabel = 'Items';
 
     this.service.getAll().subscribe({
-      next: (project) => {
-        this.l_projects = project,
+      next: (projects) => {
+        this.l_projects = projects.reverse(),
         this.total = this.l_projects.length;
         this.updatePageSlice(0,3);
 
