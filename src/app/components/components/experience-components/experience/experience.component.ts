@@ -31,6 +31,10 @@ export class ExperienceComponent {
     });
   }
 
+  isEndDateCurrent(endDate: Date | undefined): boolean {
+    return endDate === undefined || (endDate instanceof Date && (isNaN(endDate.getTime()) || endDate.getTime() === 0));
+  }
+
 
 
 }
