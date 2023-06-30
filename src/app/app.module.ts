@@ -15,21 +15,6 @@ import { HomePageComponent } from './components/pages/home-page/home-page.compon
 import { ProjectsComponent } from './components/pages/projects/projects.component';
 import { AboutMeComponent } from './components/pages/about-me/about-me.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
-import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
-import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
-import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
-import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
-import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
-import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
-import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
-import { MdbRadioModule } from 'mdb-angular-ui-kit/radio';
-import { MdbRangeModule } from 'mdb-angular-ui-kit/range';
-import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
-import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
-import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
-import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
-import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { TechnologiesChartComponent } from './components/components/technologies-chart/technologies-chart.component';
 import { SkillsContainerComponent } from './components/components/skills-container/skills-container.component';
@@ -42,6 +27,8 @@ import { ExperiencePopupComponent } from './components/components/experience-com
 import { ProjectComponent } from './components/components/project-components/project/project.component';
 import { EducationDetailComponent } from './components/components/education-components/education-detail/education-detail.component';
 import { ExperienceDetailComponent } from './components/components/experience-components/experience-detail/experience-detail.component';
+import { MaterialBModule } from './modules/materialB/materialB.module';
+
 
 @NgModule({
   declarations: [
@@ -71,24 +58,10 @@ import { ExperienceDetailComponent } from './components/components/experience-co
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MaterialBModule,
     HttpClientModule,
-    MdbAccordionModule,
-    MdbCarouselModule,
-    MdbCheckboxModule,
-    MdbCollapseModule,
-    MdbDropdownModule,
-    MdbFormsModule,
-    MdbModalModule,
-    MdbPopoverModule,
-    MdbRadioModule,
-    MdbRangeModule,
-    MdbRippleModule,
-    MdbScrollspyModule,
-    MdbTabsModule,
-    MdbTooltipModule,
-    MdbValidationModule,
     NgxChartsModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

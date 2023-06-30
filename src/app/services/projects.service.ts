@@ -26,5 +26,7 @@ export class ProjectsService {
 
 
     return this.http.get(this.apiUrl, { headers });
+
+
   }
 }
