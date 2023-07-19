@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { now } from 'd3';
 import { Experience } from 'src/app/models/experience.model';
 import { ExperienceService } from 'src/app/services/experience.service';
 
@@ -23,9 +24,9 @@ export class ExperienceListComponent {
       next: (experience) => {
 
         this.l_experience = experience.sort((a: { end_date: Date; }, b: { end_date: Date; }) => {
-          const dateA = a.end_date ? new Date(a.end_date).getTime() : 0;
-          const dateB = b.end_date ? new Date(b.end_date).getTime() : 0;
-          return dateA - dateB;
+          const dateA = a.end_date ? new Date(a.end_date).getTime() : new Date().getTime();
+          const dateB = b.end_date ? new Date(b.end_date).getTime() : new Date().getTime();
+          return dateB - dateA;
         });
 
 

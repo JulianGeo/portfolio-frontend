@@ -31,7 +31,7 @@ export class ProjectListComponent {
           return dateB - dateA;
         });
         this.total = this.l_projects.length;
-        this.updatePageSlice(0,3);
+        this.updatePageSlice(0, 3);
 
       },
       error: (console.log),
@@ -39,7 +39,7 @@ export class ProjectListComponent {
     })
   }
 
-  OnPageChange(event: PageEvent){
+  OnPageChange(event: PageEvent) {
     console.log(event)
     this.updatePageSlice(event.pageIndex, event.pageSize);
   }

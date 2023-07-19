@@ -16,7 +16,7 @@ export class ExperienceService {
 
 
   apiUrl: string = this.dbService.getConnection().apiUrl
-  + 'experience?select=company,description,position,start_date,end_date,experience_tech(technology(technology_name))'
+    + 'experience?select=company,description,position,start_date,end_date,experience_tech(technology(technology_name))'
 
 
   getAll(): Observable<any> {
@@ -28,7 +28,7 @@ export class ExperienceService {
       map((experiences: any) => {
         return experiences.map((experience: Experience) => {
           if (experience.end_date === null) {
-            experience.end_date = new Date(0);
+            experience.end_date = new Date();
           }
           return experience;
         });
