@@ -10,7 +10,7 @@ import { ExperiencePopupComponent } from '../experience-popup/experience-popup.c
 })
 export class ExperienceComponent {
 
-  @Input() experience: Experience|undefined = {
+  @Input() experience: Experience | undefined = {
     company: '',
     description: '',
     position: '',
@@ -32,7 +32,10 @@ export class ExperienceComponent {
   }
 
   isEndDateCurrent(endDate: Date | undefined): boolean {
-    return endDate === undefined || (endDate instanceof Date && (isNaN(endDate.getTime()) || endDate.getTime() === 0));
+
+    return endDate === undefined
+      || (endDate instanceof Date && (isNaN(endDate.getTime())
+        || endDate.getDate() === new Date().getDate()));
   }
 
 
