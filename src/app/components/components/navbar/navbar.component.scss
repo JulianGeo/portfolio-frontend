@@ -4,8 +4,9 @@ mat-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(36, 79, 123);
+  background-color: #146C94;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 
 
   .logo {
@@ -55,6 +56,8 @@ mat-toolbar {
         text-decoration: underline;
       }
     }
+
+
   }
 
   .right {
@@ -67,16 +70,19 @@ mat-toolbar {
       color: rgb(0, 0, 0);
     }
 
+    i {
+      font-size: 20px;
+    }
+
     .language {
       display: flex;
       flex-direction: row;
     }
 
-
   }
 
-  @media screen and (max-width: 600px) {
-    .center {
+  @media screen and (max-width: 725px) {
+    /* .center {
       flex-basis: 100%;
       justify-content: center;
       margin-top: 10px;
@@ -89,14 +95,20 @@ mat-toolbar {
           margin-right: 0;
         }
       }
+    } */
+
+    .center{
+      display: none;
     }
+
 
     .right {
       margin-left: auto;
     }
 
-    .logo {
+/*     .logo {
       display: none;
-    }
+    } */
   }
+
 }

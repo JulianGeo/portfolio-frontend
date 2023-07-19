@@ -1,0 +1,13 @@
+<div>
+  <div ngClass="project-list-container">
+    <div ngClass="project-list-container-header">
+      <h2>Proyectos</h2>
+      <div class="separator"></div>
+    </div>
+    <app-project *ngFor="let i_project of pageSlice" [project]="i_project"></app-project>
+  </div>
+
+  <mat-paginator [length]="total" [pageSize]="3" [pageSizeOptions]="[1, 2, 3, 4,5]" aria-label="Select page"
+    (page)="OnPageChange($event)">
+  </mat-paginator>
+</div>

@@ -1,0 +1,50 @@
+.experience-card {
+  margin: 15px auto;
+  width: 100%;
+  background-color: rgba(176, 212, 227, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  .experience-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  .experience-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .experience-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .experience-description {
+    font-size: 16px;
+  }
+
+
+
+  .more-information {
+    width: 35px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+    .project-image {
+      display: none;
+    }
+  }
+}

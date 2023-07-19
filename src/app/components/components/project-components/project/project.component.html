@@ -1,0 +1,39 @@
+<!-- <p>Project name: {{project?.name}}</p>
+<p *ngIf="project?.project_tech?.length"> Project technologies: {{project?.project_tech?.[0]?.technology?.technology_name}}</p>
+ -->
+
+<!-- <div class="project-card">
+  <div class="project-image">
+    <img [src]="project?.imageUrl" alt="Project Image">
+  </div>
+  <div class="project-details">
+    <h2 class="project-name">{{ project?.name }}</h2>
+    <p class="project-description">{{ project?.description }}</p>
+    <div class="project-technologies">
+      <p *ngFor="let technology of project?.project_tech" class="technology">{{ technology.technology.technology_name }}</p>
+    </div>
+    <div class="project-links">
+      <a *ngIf="project?.githubUrl" [href]="project?.githubUrl" target="_blank">GitHub</a>
+      <a *ngIf="project?.webUrl" [href]="project?.webUrl" target="_blank">Website</a>
+    </div>
+  </div>
+</div> -->
+
+<div class="project-card">
+  <div class="project-image">
+<!--     <img src="../../../../assets/springboot.png" alt="Project Image"> -->
+    <img *ngIf="project?.image_url" [src]="project?.image_url" alt="Project Image">
+  </div>
+  <div class="project-details">
+    <h2 class="project-name">{{ project?.name }}</h2>
+    <p class="project-description">{{ project?.description }}</p>
+    <div class="project-technologies">
+      <p *ngFor="let technology of project?.project_tech" class="technology">{{ technology.technology.technology_name
+        }}</p>
+    </div>
+    <div class="project-links">
+      <a *ngIf="project?.githubUrl" href={{project?.githubUrl}} target="_blank">GitHub</a>
+      <a *ngIf="project?.webUrl" href={{project?.webUrl}} target="_blank">Website</a>
+    </div>
+  </div>
+</div>

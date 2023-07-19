@@ -1,0 +1,111 @@
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .profile-resume,
+  .working-experience,
+  .education,
+  .skills {
+    margin-bottom: 40px;
+
+    h2 {
+      color: #333;
+    }
+  }
+}
+
+
+.main-skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .main-skill-container {
+    justify-items: center;
+
+    .skill-description {
+      text-align: center;
+      h3{
+        max-width: 120px;
+        word-wrap: break-word;
+      }
+      p {
+        max-width: 120px;
+        word-wrap: break-word;
+      }
+    }
+
+
+    .main-skill {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        background-color: #146C94;
+        clip-path: polygon(50% 0%,
+            75% 0%,
+            100% 50%,
+            75% 100%,
+            50% 100%,
+            25% 100%,
+            0% 50%,
+            25% 0%);
+      }
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 45px;
+        color: #fff;
+      }
+    }
+  }
+
+
+}
+
+
+
+#main-skill-container-1{
+  animation: zoomIn 0.5s;
+}
+#main-skill-container-2{
+  animation: zoomIn 1s;
+}
+#main-skill-container-3{
+  animation: zoomIn 1.5s;
+}
+#main-skill-container-4{
+  animation: zoomIn 2s;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

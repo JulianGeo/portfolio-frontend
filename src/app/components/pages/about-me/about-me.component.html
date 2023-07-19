@@ -1,1 +1,25 @@
-<p>about-me works!</p>
+<section ngClass="about-section">
+
+  <div ngClass="sub-section-header">
+    <h2>Perfil</h2>
+    <div ngClass="separator"></div>
+  </div>
+
+  <div ngClass="container">
+
+    <app-skills-container></app-skills-container>
+
+
+    <div ngClass="sub-section-header">
+      <h2>Perfíl profesional</h2>
+      <div ngClass="separator"></div>
+    </div>
+
+    <app-professional-profile></app-professional-profile>
+
+    <mat-tab-group>
+      <mat-tab label="Experiencia profesional"><app-experience-list></app-experience-list></mat-tab>
+      <mat-tab label="Educación"> <app-education-list></app-education-list></mat-tab>
+    </mat-tab-group>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+.profile-resume-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 35px;
+  justify-content: center;
+
+  .profile-resume {
+    text-align: center;
+    margin: 10px 25px;
+
+    p {
+      max-width: 650px; // Set the maximum width of the <p> element
+    }
+
+    img {
+      width: 120px;
+      margin-bottom: 30px;
+    }
+
+  }
+
+
+
+  .app-technologies-chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(175, 211, 226, 0.3);
+    border-radius: 25px;
+    //margin: 15px 5px 15px 25px;
+    overflow-x: auto;
+  }
+
+  @media screen and (max-width: 860px) {
+    flex-direction: column;
+  }
+
+
+
+
+}

@@ -1,0 +1,82 @@
+.about-section {
+  background-color: #F6F1F1;
+  padding: 50px 0;
+
+  .sub-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .separator {
+      width: 70px;
+      height: 2px;
+      background-color: #146C94;
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .background {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-height: 50%;
+
+      .working-experience-container,
+      .education-container {
+        width: 450px;
+      }
+    }
+
+    ::ng-deep {
+
+      mat-tab-group{
+        margin-top: 30px;
+      }
+
+
+      mat-tab-body{
+        justify-content: center!important;
+      }
+
+      .mdc-tab__content{
+        font-size: 25px;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: normal;
+      }
+
+      .mdc-tab--active .mdc-tab__text-label, .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+        color: #146C94;
+      }
+
+      .mat-mdc-tab:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline, .mat-mdc-tab-link:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline {
+        border-color: #146C94;
+      }
+
+    }
+
+
+    .profile-resume,
+    .working-experience,
+    .education,
+    .skills {
+      margin-bottom: 40px;
+
+      h2 {
+        color: #333;
+      }
+    }
+  }
+
+
+}

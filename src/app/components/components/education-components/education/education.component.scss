@@ -1,0 +1,48 @@
+.education-card {
+  margin: 15px auto;
+  width: 100%;
+  background-color: rgb(175, 211, 226, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  .education-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .education-description {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  }
+
+
+  .education-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .education-name {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .more-information {
+      width: 35px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+  }
+
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+  }
+
+
+}

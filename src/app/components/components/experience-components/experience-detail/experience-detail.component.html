@@ -1,0 +1,11 @@
+<div class="experience-card">
+  <div class="experience-details">
+    <h2 class="experience-name">{{ experience?.company}}</h2>
+    <p class="experience-description">{{ experience?.position }}</p>
+    <p class="experience-description">{{ experience?.description }}</p>
+    <div class="experience-technologies">
+      <p *ngFor="let technology of experience?.experience_tech" class="technology">{{ technology.technology.technology_name
+        }}</p>
+    </div>
+  </div>
+</div>
