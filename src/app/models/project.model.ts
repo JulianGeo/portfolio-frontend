@@ -9,4 +9,5 @@ export interface Project {
   githubUrl?: string,
   webUrl?: string
   updated_at: Date,
+  show?: boolean
 }
