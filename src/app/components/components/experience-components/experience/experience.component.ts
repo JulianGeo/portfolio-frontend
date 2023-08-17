@@ -6,10 +6,9 @@ import { ExperiencePopupComponent } from '../experience-popup/experience-popup.c
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrls: ['./experience.component.scss'],
 })
 export class ExperienceComponent {
-
   @Input() experience: Experience | undefined = {
     company: '',
     description: '',
@@ -17,29 +16,26 @@ export class ExperienceComponent {
     image_url: '',
     start_date: new Date(),
     end_date: new Date(),
-  }
+  };
 
-  constructor(
-    private dialog: MatDialog
-  ) { }
+  constructor(private dialog: MatDialog) {}
 
   openDialog() {
-    const dialogRef = this.dialog.open(ExperiencePopupComponent, { data: this.experience });
+    const dialogRef = this.dialog.open(ExperiencePopupComponent, {
+      data: this.experience,
+    });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
     });
   }
 
   isEndDateCurrent(endDate: Date | undefined): boolean {
-
-    return endDate === undefined
-      || (endDate instanceof Date && (isNaN(endDate.getTime())
-        || endDate.getDate() === new Date().getDate()));
+    return (
+      endDate === undefined ||
+      (endDate instanceof Date &&
+        (isNaN(endDate.getTime()) ||
+          endDate.getDate() === new Date().getDate()))
+    );
   }
-
-
-
 }
-
-
